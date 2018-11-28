@@ -13268,7 +13268,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TODO: Total number of records</span>
@@ -13359,7 +13359,7 @@ Percentage of individuals making more than $50,000: 24.78439697492371%
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Split the data into features and target label</span>
@@ -13408,7 +13408,7 @@ Percentage of individuals making more than $50,000: 24.78439697492371%
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Log-transform the skewed features</span>
@@ -13458,7 +13458,7 @@ Percentage of individuals making more than $50,000: 24.78439697492371%
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Import sklearn.preprocessing.StandardScaler</span>
@@ -13670,7 +13670,7 @@ Percentage of individuals making more than $50,000: 24.78439697492371%
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TODO: One-hot encode the &#39;features_log_minmax_transform&#39; data using pandas.get_dummies()</span>
@@ -13721,7 +13721,7 @@ Percentage of individuals making more than $50,000: 24.78439697492371%
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Import train_test_split</span>
@@ -13819,7 +13819,7 @@ It is a ratio of true positives(words classified as spam, and which are actually
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&#39;&#39;&#39;</span>
@@ -13836,13 +13836,12 @@ It is a ratio of true positives(words classified as spam, and which are actually
 <span class="n">FP</span><span class="o">=</span><span class="n">income</span><span class="o">.</span><span class="n">count</span><span class="p">()</span><span class="o">-</span><span class="n">TP</span>
 <span class="n">TN</span><span class="o">=</span><span class="mi">0</span>
 <span class="n">FN</span><span class="o">=</span><span class="mi">0</span>
-<span class="n">accuracy</span> <span class="o">=</span><span class="n">TP</span><span class="o">/</span><span class="p">(</span><span class="n">TP</span><span class="o">+</span><span class="n">TN</span><span class="p">)</span> 
+<span class="n">accuracy</span> <span class="o">=</span><span class="n">TP</span><span class="o">/</span><span class="p">(</span><span class="n">TP</span><span class="o">+</span><span class="n">FP</span><span class="p">)</span> 
 <span class="n">recall</span> <span class="o">=</span> <span class="n">TP</span><span class="o">/</span><span class="p">(</span><span class="n">TP</span><span class="o">+</span><span class="n">FN</span><span class="p">)</span>
-<span class="n">precision</span> <span class="o">=</span> <span class="n">TP</span><span class="o">/</span><span class="p">(</span><span class="n">TP</span><span class="o">+</span><span class="n">FP</span><span class="p">)</span>
 
 <span class="c1"># TODO: Calculate F-score using the formula above for beta = 0.5 and correct values for precision and recall.</span>
 <span class="n">beta</span><span class="o">=</span><span class="mf">0.5</span>
-<span class="n">fscore</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">beta</span><span class="o">*</span><span class="n">beta</span><span class="p">)</span><span class="o">*</span><span class="n">precision</span><span class="o">*</span><span class="n">recall</span><span class="o">/</span><span class="p">(</span><span class="n">beta</span><span class="o">*</span><span class="n">beta</span><span class="o">*</span><span class="n">precision</span><span class="o">+</span><span class="n">recall</span><span class="p">)</span>
+<span class="n">fscore</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">beta</span><span class="o">*</span><span class="n">beta</span><span class="p">)</span><span class="o">*</span><span class="n">accuracy</span><span class="o">*</span><span class="n">recall</span><span class="o">/</span><span class="p">(</span><span class="n">beta</span><span class="o">*</span><span class="n">beta</span><span class="o">*</span><span class="n">accuracy</span><span class="o">+</span><span class="n">recall</span><span class="p">)</span>
 
 <span class="c1"># Print the results </span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Naive Predictor: [Accuracy score: </span><span class="si">{:.4f}</span><span class="s2">, F-score: </span><span class="si">{:.4f}</span><span class="s2">]&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">accuracy</span><span class="p">,</span> <span class="n">fscore</span><span class="p">))</span>
@@ -13862,7 +13861,7 @@ It is a ratio of true positives(words classified as spam, and which are actually
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Naive Predictor: [Accuracy score: 1.0000, F-score: 0.2917]
+<pre>Naive Predictor: [Accuracy score: 0.2478, F-score: 0.2917]
 </pre>
 </div>
 </div>
@@ -13908,16 +13907,17 @@ It is a ratio of true positives(words classified as spam, and which are actually
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>**Answer: 1.Gaussian Naive Bayes. 2. Support Vector Machines. 3.Adaboost</p>
-<p>1.Gaussian Naive Bayes: It can be applied in text classifications in the read-world, such as classifying and filtering spam email.</p>
+<p>1.Gaussian Naive Bayes: (ref:<a href="https://en.wikipedia.org/wiki/Naive_Bayes_spam_filtering)It">https://en.wikipedia.org/wiki/Naive_Bayes_spam_filtering)It</a> can be applied in text classifications in the read-world, such as classifying and filtering spam email.</p>
 <p>Strengths: it received a large amount of data in the training and query the available speed. The training and classification of the project is only based on the characteristics of the probability of it, so it can still be fast even when the training set is extremely large.</p>
 <p>Weakenesses: Cannot handle the combination of feature-based changes in the result produced, for example, two separate words show that they are non-spam features but the combination of them usually appears in a spam email.</p>
 <p>Why this model: the training set has data  with few features.</p>
-<p>2.SVM: It can be used in text and hypertext categorizaiotn, image classification, hand-written digit recongization, and wildly applied in biological and other science fields.</p>
+<p>2.SVM: It can be used in text and hypertext categorizaiotn, image classification, hand-written digit recongization, and wildly applied in biological and other science fields.(ref:<a href="https://en.wikipedia.org/wiki/Support_vector_machine">https://en.wikipedia.org/wiki/Support_vector_machine</a>)</p>
 <p>Strengths: effective in high dimensional spaces;It works well when there is a clear margin of separation.</p>
 <p>Weaknesses: It might cost a lot of time on large datasets.</p>
 <p>Why this model: total number of features is not large, and some of features can be clearly defined.</p>
-<p>3.Adaboost: It can be used for face detection.</p>
-<p>Strengths: High precision, since at each training period, it iteratively gives more weight to misclassified labels to allow the classifier to focus on the harder case, which makes the performance of the model better.</p>
+<p>3.Adaboost: It can be used for face detection.
+（ref:<a href="http://rob.schapire.net/papers/explaining-adaboost.pdf">http://rob.schapire.net/papers/explaining-adaboost.pdf</a>; <a href="https://en.wikipedia.org/wiki/AdaBoost）">https://en.wikipedia.org/wiki/AdaBoost）</a>
+Strengths: High precision, since at each training period, it iteratively gives more weight to misclassified labels to allow the classifier to focus on the harder case, which makes the performance of the model better.</p>
 <p>Weaknesses: Sensitive to noisy data and outliers, so preprocessing the train data is importanr. it might become overfit if the base classifier  is too complex.</p>
 <p>Why this model: the dataset is clean, and is not so large that a relatively slow learning model is admitted.</p>
 <p>**</p>
